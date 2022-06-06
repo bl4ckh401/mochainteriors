@@ -1,0 +1,1127 @@
+/*Laptop and Desktop and wide screen view */
+html {
+  background-color: azure;
+}
+body{
+  background-color: azure;
+}
+.App {
+  background-color: azure;
+  min-height: 100vh;
+  color: black;
+  min-width: 100vw;
+  justify-content: center;
+  align-items: center;
+  top: 0%;
+}
+.main_nav {
+  display: flex;
+  width: 100%;
+  font-family: Rubik;
+  text-transform: uppercase;
+  letter-spacing: 3.077px;
+  font-size: 16px;
+  line-height: 22.4px;
+  font-weight: 400;
+  color:  black;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.logo_nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav_link {
+  color: black;
+}
+
+.nav-options {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.mobile-option {
+  display: flex;
+}
+
+.mobile-menu {
+  display: none;
+}
+.mochalogo {
+  width: 200px;
+  height: 200px;
+  justify-content: center;
+  align-items: left;
+  float: left;
+  resize: both;
+  padding-bottom: 10;
+}
+.img_logo {
+  width: 200px;
+  height: 200px;
+}
+.option {
+  flex-direction: row;
+  display: flex;
+}
+
+.option:hover {
+  color: gold;
+}
+
+.main_top{
+  justify-content: center;
+  align-items: center;
+}
+.home_top{
+/* background-image: url("../public/pexels-vecislavas-popa-1643383.jpg"); */
+resize: both;
+font: normal normal normal 17px/26px Poppins;
+display: flex;
+flex-direction: column;
+opacity: 1;
+justify-content: center;
+top: auto;
+align-items: center;
+}
+.imagehome {
+  width: 100vw;
+  height: 60vw;
+}
+.footer_main{
+  margin-top: 80px;
+  height: fit-content;
+  align-items: center;
+  display: flex;
+  width: 100vw;
+  flex-direction: row;
+  background-color: #cdffff;
+  margin-bottom: 120px;
+}
+.allfooter_content{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.footer_links{
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  height: max-content;
+}
+.contact_menu{
+  list-style-type: none;
+  width: max-content;
+  height: max-content;
+}
+.about_main{
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: azure;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.long_horizontal_rectangle{
+  background-color: #f8dd38;
+  width: 80vw;
+  
+  border-radius: 10px;
+}
+.all_content{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: #241e20;
+}
+.long_text{
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.our_mission_rectangle{
+  background-color: #767875;
+  width: 39vw;
+  border-radius: 10px;
+  margin-right: 1vw;
+  margin-top: 20px;
+  color: azure;
+  height: fit-content;
+}
+.mission_text{
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: azure;
+}
+.our_mission_title{
+  color: azure;
+}
+.our_vission_rectangle {
+  background-color: #775f4f;
+  width: 39vw;
+  margin: 1vw;
+  height: fit-content;
+  border-radius: 10px;
+  color: azure;
+  margin-top: 20px;
+}
+.vission_text {
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 10px;
+  color: azure;
+  padding-bottom: 20px;
+}
+.vission_mission{
+  display: flex;
+  flex-direction: row;
+}
+.our_vission_title {
+  color: azure;
+}
+.carousel_title {
+  color: #ffffff;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.caurosel{
+  position: relative;
+  top:0;
+  left: 0;
+}
+.carousel_text{
+  color: #ffffff;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.carousel_content{
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  width: 70vw;
+  top: 40%;
+  left: 15%;
+}
+.button{
+  background-color: transparent;
+  border: #ffffff solid 3px;
+  border-radius: 50px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.chats {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0px;
+  padding: 10px;
+  height: fit-content;
+}
+.chatpageContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.get_in_touch{
+  text-align: center;
+  padding-bottom: 20px;
+}
+.location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+  background-color: tomato;
+  color: black;
+  border-radius: 12px;
+  border: tomato solid 0.5px;
+  width: 30vw;
+  opacity: 0.8;
+  margin-bottom: 10px;
+  padding-left: 30px;
+}
+
+.SubmitContact {
+  background-color: transparent;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 50vw;
+  border-radius: 5px;
+}
+
+.texts {
+  padding-left: 30px;
+}
+
+.postChat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  margin-right: 20px;
+}
+
+.emailinput {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 50vw;
+  padding: 10px;
+  background-color: transparent;
+  color: black;
+  border-radius: 5px;
+}
+
+.postChatForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+.portfolio_page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.all_projects{
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  flex-wrap: wrap;
+}
+.done_projects{
+  z-index: 0;
+  justify-content: center;
+  align-items: center;
+}
+.cover_projects:hover{
+  width: 343px;
+  position: relative;
+  height: 343px;
+  opacity: 1;
+  z-index: 10;
+  display: flex;
+  background-color: black;
+}
+.cover_projects{
+  width: 343px;
+  position: relative;
+  height: 343px;
+  opacity: 0.8;
+  z-index: 10;
+  display: flex;
+  background-color: black;
+}
+.blog_page{
+  display: flex;
+  width: 100vw;
+  height: fit-content;
+  margin-top: 120px;
+  justify-content: center;
+  align-items: center;
+}
+.blog_content{
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  flex-wrap: wrap;
+}
+.blog_container{
+  width:43vw;
+  margin: 1vw;
+  padding: auto;
+  box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+}
+.sign_up {
+  width: 100%;
+  min-height: 80vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.form{
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.input{
+  width: 70%;
+  height: 40px;
+  padding: 10;
+  border-radius: 7px;
+  border: solid cadetblue;
+  border-width: 0.3px;
+  margin: 10px;
+  background-color: aliceblue;
+}
+.shop_page{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  column-count: 4;
+  min-height: 70vh;
+}
+.product {
+  border: 1px solid #000;
+  box-shadow: 5px 5px 14px 2px #000;
+  padding: 10px;
+  width: 300px;
+  min-height: fit-content;
+  height: 240px;
+}
+
+/* medium devices and tablets */
+
+@media (max-width: 768px) {
+html {
+    width: 100vw;
+  }
+
+  .App {
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+  }
+
+  .main_nav {
+    display: flex;
+    background-color: azure;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+    width: 96vw;
+    position: relative;
+    padding: 20;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  .logo_nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    height: fit-content;
+  }
+
+  .nav-options {
+    display: flex;
+    width: 100vw;
+    height: 100vmax;
+    position: absolute;
+    top: 55px;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    justify-content: flex-start;
+    flex-direction: column;
+    list-style-type: none;
+  }
+
+  .nav-options.active {
+    background: azure;
+    left: 0;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    transition: all 0.5s ease;
+    z-index: 1000;
+    align-items: center;
+    padding-left: 0px;
+  }
+
+  .nav_link {
+    color: black;
+  }
+
+  .menu-icon {
+    width: 30px;
+    height: 30px;
+    color: black;
+  }
+  .mochalogo{
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    align-items: left;
+    float: left;
+    resize: both;
+  }
+  .img_logo{
+    width: 70px;
+      height: 70px;
+  }
+    .option {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 10vw;
+      width: 100%;
+      color: black;
+    }
+
+    .mobile-menu {
+      display: block;
+      justify-content: center;
+      align-items: center;
+    }
+    .horizontal{
+      display: none;
+    }
+    .main_top {
+      justify-content: center;
+      align-items: center;
+    }
+
+  .home_top {
+    /* background-image: url("../public/pexels-vecislavas-popa-1643383.jpg"); */
+    resize: both;
+    display: flex;
+    top: auto;
+    flex-direction: column;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imagehome {
+    width: 80vw;
+    height: 50vw;
+  }
+  .footer_main {
+    margin-top: 80px;
+    height: 30vw;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    background-color: #cdffff;
+    margin-bottom: 60px;
+  }
+
+  .allfooter_content {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .footer_links {
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: max-content;
+  }
+    .carousel_title {
+      color: #ffffff;
+      line-height: 1.6;
+      letter-spacing: 1px;
+      word-spacing: 1px;
+      text-align: center;
+      text-decoration: underline;
+      text-transform: uppercase;
+    }
+
+    .contact_menu {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      min-width: 40px;
+      height: max-content;
+    }
+  .about_main {
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: azure;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .long_horizontal_rectangle {
+    background-color: #f8dd38;
+    width: 80vw;
+    border-radius: 10px;
+  }
+
+  .all_content {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: #241e20;
+  }
+
+  .long_text {
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .our_mission_rectangle {
+    background-color: #767875;
+    width: 39vw;
+    border-radius: 10px;
+    margin-right: 1vw;
+    margin-top: 20px;
+    color: azure;
+    height: max-content;
+  }
+
+  .mission_text {
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: azure;
+  }
+
+  .our_mission_title {
+    color: azure;
+  }
+
+  .our_vission_rectangle {
+    background-color: #775f4f;
+    width: 39vw;
+    margin: 1vw;
+    height: min-content;
+    border-radius: 10px;
+    color: azure;
+    margin-top: 20px;
+  }
+
+  .vission_text {
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 10px;
+    color: azure;
+    padding-bottom: 20px;
+  }
+
+  .vission_mission {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .our_vission_title {
+    color: azure;
+  }
+  .chats {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    padding: 10px;
+    height: 78vh;
+  }
+
+  .location {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    background-color: tomato;
+    color: black;
+    border-radius: 12px;
+    width: 30vw;
+    opacity: 0.8;
+    margin-bottom: 10px;
+    padding-left: 30px;
+  }
+
+  .SubmitContact {
+    background-color: transparent;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 50vw;
+    border-radius: 5px;
+  }
+
+  .texts {
+    padding-left: 30px;
+  }
+
+  .textsemail {
+    padding-left: 10px;
+    font-size: medium;
+  }
+
+  .postChat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    margin-right: 20px;
+  }
+
+  .emailinput {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 50vw;
+    padding: 10px;
+    background-color: transparent;
+    color: black;
+    border-radius: 5px;
+  }
+
+  .postChatForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+  }
+  .blog_page {
+    display: flex;
+    width: 100vw;
+    height: fit-content;
+    margin-top: 120px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blog_content {
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .blog_container {
+    width: 80vw;
+    margin-top: 30px;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    ;
+  }
+  .sign_up{
+    width: 100%;
+    min-height: 80vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+    .shop_page {
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      column-count: 4;
+    }
+.product {
+  border: 1px solid #000;
+  box-shadow: 5px 5px 14px 2px #000;
+  padding: 10px;
+  width: 300px;
+  min-height: fit-content;
+  height: 240px;
+}
+
+}
+@media (max-width: 540px) {
+html {
+    width: 100vw;
+  }
+
+  .App {
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .main_nav {
+    display: flex;
+    background-color: azure;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+    width: 96vw;
+    position: relative;
+    padding: 20;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  .logo_nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    height: fit-content;
+  }
+
+
+  .nav-options {
+    display: flex;
+    width: 100vw;
+    height: 100vmax;
+    position: absolute;
+    top: 55px;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    justify-content: flex-start;
+    flex-direction: column;
+    list-style-type: none;
+  }
+
+  .nav-options.active {
+    background: azure;
+    left: 0;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    transition: all 0.5s ease;
+    z-index: 1000;
+    align-items: center;
+    padding-left: 0px;
+  }
+
+  .nav_link {
+    color: black;
+  }
+
+  .menu-icon {
+    width: 30px;
+    height: 30px;
+    color: black;
+  }
+
+  .mochalogo {
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    align-items: left;
+    float: left;
+    resize: both;
+  }
+
+  .img_logo {
+    width: 70px;
+    height: 70px;
+  }
+  .carousel_title{
+    color: #ffffff;
+    line-height: 1.6;
+    letter-spacing: 1px; 
+    word-spacing: 1px; 
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+
+  .option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vw;
+    width: 100%;
+    color: black;
+  }
+
+  .mobile-menu {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .horizontal {
+    display: none;
+  }
+
+  .main_top {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home_top {
+    /* background-image: url("../public/pexels-vecislavas-popa-1643383.jpg"); */
+    resize: both;
+    display: flex;
+    top: auto;
+    flex-direction: column;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imagehome {
+    width: 100vw;
+    height: 60vw;
+  }
+
+  .footer_main {
+    margin-top: 80px;
+    height: 30vw;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    background-color: #cdffff;
+    margin-bottom: 120px;
+  }
+
+  .allfooter_content {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .footer_links {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: max-content;
+  }
+
+  .contact_menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    min-width: 40px;
+    height: max-content;
+  }
+  .about_main {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: azure;
+    flex-direction: column;
+    margin-top: 20px;
+    height: fit-content;
+  }
+
+  .long_horizontal_rectangle {
+    background-color: #f8dd38;
+    width: 80vw;
+    border-radius: 10px;
+  }
+
+  .all_content {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: #241e20;
+  }
+
+  .long_text {
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .our_mission_rectangle {
+    background-color: #767875;
+    width: 80vw;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: azure;
+  }
+
+  .mission_text {
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: azure;
+  }
+
+  .our_mission_title {
+    color: azure;
+  }
+
+  .our_vission_rectangle {
+    background-color: #775f4f;
+    width: 80vw;
+    border-radius: 10px;
+    color: azure;
+    margin-top: 20px;
+  }
+
+  .vission_text {
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 10px;
+    color: azure;
+    padding-bottom: 20px;
+  }
+
+  .vission_mission {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .our_vission_title {
+    color: azure;
+  }
+  .chats {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    padding: 10px;
+    height: fit-content;
+  }
+
+  .location {
+    display: none;
+  }
+
+  .SubmitContact {
+    background-color: transparent;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 50vw;
+    border-radius: 5px;
+  }
+
+  .texts {
+    padding-left: 30px;
+  }
+
+  .textsemail {
+    padding-left: 10px;
+    font-size: medium;
+  }
+
+  .postChat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    margin-right: 20px;
+  }
+
+  .emailinput {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 50vw;
+    padding: 10px;
+    background-color: transparent;
+    color: black;
+    border-radius: 5px;
+  }
+
+  .postChatForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+  }
+  .blog_page {
+    display: flex;
+    width: 100vw;
+    height: fit-content;
+    margin-top: 120px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blog_content {
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .blog_container {
+    width: 80vw;
+    margin-top: 30px;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    ;
+  }
+    .shop_page {
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .product {
+      border: 1px solid #000;
+      box-shadow: 5px 5px 14px 2px #000;
+      padding: 10px;
+      min-width: 200px;
+      min-height: fit-content;
+    }
+}
