@@ -29,7 +29,7 @@ export const fetchOrdersFailure = (error) => {
 export const fetchOrders = () => {
     return dispatch => {
         dispatch(fetchOrdersRequest())
-        axios.get('http://127.0.0.1:8000/cartorders/')
+        axios.get('https://mochainterior.herokuapp.com/cartorders/')
             .then((res) => {
                 dispatch(fetchOrdersSuccess(res.data))
             })
@@ -41,7 +41,7 @@ export const fetchOrders = () => {
 
 export const updateProduct = (productId, productData) => {
     return dispatch => {
-        axios.put(`http://127.0.0.1:8000/cartproducts/${productId}/`, { category: productData.category, name: productData.name, price: productData.price, quantity: productData.quantity, image_url: productData.imageUrl })
+        axios.put(`https://mochainterior.herokuapp.com/cartproducts/${productId}/`, { category: productData.category, name: productData.name, price: productData.price, quantity: productData.quantity, image_url: productData.imageUrl })
             .then((res) => {
                 toastr.success(`Product ${productData.name} updated successfully.`)
             })
@@ -53,7 +53,7 @@ export const updateProduct = (productId, productData) => {
 
 export const addNewProduct = (productData) => {
     return dispatch => {
-        axios.post('/http://127.0.0.1:8000/cartproducts/', { category: productData.category, name: productData.name, price: productData.price, quantity: productData.quantity, description: productData.description, image_url: productData.imageUrl })
+        axios.post('https://mochainterior.herokuapp.com/cartproducts/', { category: productData.category, name: productData.name, price: productData.price, quantity: productData.quantity, description: productData.description, image_url: productData.imageUrl })
             .then((res) => {
                 toastr.success(`Product ${productData.name} added successfully.`)
                 dispatch(fetchProducts())
@@ -66,7 +66,7 @@ export const addNewProduct = (productData) => {
 
 export const deleteProduct = (productId, productName) => {
     return dispatch => {
-        axios.delete(`http://127.0.0.1:8000/cartproducts/${productId}`)
+        axios.delete(`https://mochainterior.herokuapp.com/cartproducts/${productId}`)
             .then((res) => {
                 toastr.info(`Product ${productName} has been removed.`)
                 dispatch(fetchProducts())

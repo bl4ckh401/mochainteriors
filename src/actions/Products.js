@@ -25,7 +25,7 @@ export const fetchProductsFailure = (error) => {
 export const fetchProducts = () => {
     return dispatch => {
         dispatch(fetchProductsRequest())
-        axios.get('http://127.0.0.1:8000/cartproducts/')
+        axios.get('https://mochainterior.herokuapp.com/cartproducts/')
             .then((res) => {
                 dispatch(fetchProductsSuccess(res.data))
                 console.log("These products were fetched successfully:", res.data)
