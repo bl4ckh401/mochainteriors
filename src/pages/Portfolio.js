@@ -23,7 +23,7 @@ function Portfolio() {
     }, []);
 
     return (
-        <div className='portfolio_page'>
+        <div className='portfolio_page' id='portfolio'>
             <h1>PORTFOLIO</h1>
             <div className='all_projects'>
                 {

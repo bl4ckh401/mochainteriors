@@ -39,7 +39,7 @@ function Contact() {
     }
 
     return (
-        <div className='chats'>
+        <div className='chats' id='contact' >
             <h1>CONTACT</h1>
             <h5 className='get_in_touch'>Contact Mocha Interiors team for any queries you have.<br /> Please get in touch with us via the contacts below or by filling the contact us form.</h5>
             <div className="chatpageContent">

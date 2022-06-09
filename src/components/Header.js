@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import '../App.css';
 import { HeaderData } from '../utils/HeaderData';
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -35,9 +35,19 @@ function Header() {
                 <div className='logo_nav'>
                     <ul className={click ? "nav-options active" : "nav-options"}>
                         {HeaderData.map((item) => {
+                            console.log(item)
                             return (
-                                <Link to={item.path}>
-                                    <li className="option mobile-option">{item.title}</li>
+                                <Link to={item.path}
+                                    spy={true}
+                                    smooth={true}
+                                    hashSpy={true}
+                                    offset={-50}
+                                    duration={500}
+                                    delay={1000}
+                                    isDynamic={true}
+                                    ignoreCancelEvents={false}
+                                    spyThrottle={500}>
+                                    <li className={item.title.toUpperCase() == "CONTACTS" ? "contact_btn option mobile-option" : "option mobile-option"}>{item.title}</li>
                                 </Link>
                             )
                         })}

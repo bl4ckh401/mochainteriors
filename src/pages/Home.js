@@ -3,7 +3,7 @@ import CauroselPage from '../components/CauroselPage'
 
 function Home() {
     return (
-        <div className='main_top'>
+        <div className='main_top' id='home'>
             <div className='home_top'>
                 <CauroselPage />
             </div>

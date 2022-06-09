@@ -1,10 +1,80 @@
-# Getting Started with Create React App
+# Mocha Interior Designs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Introduction
+
+This project was build with react and Django. Interior design web page.
+Color Schemes are:
+White,
+Gray,
+Gold
+
+## To Run this app in Development.
+
+First you need to clone the repository into your local machine, After that. Run
+
+##### React front End
+
+## `npm install`
+
+This is to ensure that all dependencies are installed into your local machine.
+
+##### Django backEnd
+
+Also on the this directory make sure to also install the django dependencies in the requirements.txt file.
+Do this by:
+
+Create virtualenv and install all requirements in **backend** directory:
+
+    cd shopping-cart/backend/
+    python3 -m venv venv_name
+    source venv_name/bin/activate
+    pip install -r requirements.txt
+
+Prepare database in postgreSQL:
+
+    sudo -u postgres psql
+    CREATE DATABASE mochainteriors; # Don't forget the semicolon in the end
+
+    # Quit postgresql shell
+    \q
+
+Set up database connection in **shopping-cart/backend/backend/settings.py** in DATABASES section:
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'mochainteriors',
+            'USER': 'YOUR_USERNAME', # replace with your own username
+            'PASSWORD': 'YOUR_PASSWORD', # replace with your own password
+            'HOST': 'localhost',
+            'PORT': ''
+        }
+    }
+
+## `pip install -r requirements.txt`
+
+Make sure this is done in a virtualenv. This installs all the dependencies listed in the requirements.txt file
+
+Fire up **backend** server:
+
+    cd shopping-cart/backend/
+    python manage.py migrate
+    python manage.py runserver
+
+Open another terminal for **frontend** server:
+
+    cd shopping-cart/frontend/
+    yarn start
+
+or with npm:
+
+    npm start
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+## FRONT END
 
 ### `npm start`
 
@@ -68,3 +138,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## BACKEND
+
+### `python3 ./manage.py makemigrations`
+
+Creates builds to the model.py file and prepares for the migratioin.
+
+### `python3 ./manage.py migrate`
+
+makes changes to the database and imporrts the new tables.
+
+### `python3 ./manage.py runserver`
+
+starts the development server and ensures the django app is running
+
+## Built With
+
+- [React](https://facebook.github.io/react/) - A JavaScript library for building UI
+
+* [Redux](https://redux.js.org/) - A predictable state container for JavaScript apps
+* [Django REST framework](http://www.django-rest-framework.org/) - A powerful and flexible toolkit for building Web APIs
+* [django-rest-framework-jwt](http://getblimp.github.io/django-rest-framework-jwt/) - JSON Web Token Authentication support for Django REST framework

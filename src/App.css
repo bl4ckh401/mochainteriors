@@ -1,20 +1,22 @@
 /*Laptop and Desktop and wide screen view */
 html {
-  background-color: azure;
+  background-color: white;
   min-width: 100vw;
+  min-height: 100vh;
 }
 body{
-  background-color: azure;
+  background-color: white;
   min-width: 100vw;
-}
+  min-height: 100vh;}
 .App {
-  background-color: azure;
+  background-color: white;
   min-height: 100vh;
   color: black;
   min-width: 100vw;
   justify-content: center;
   align-items: center;
   top: 0%;
+  position: relative;
 }
 .main_nav {
   display: flex;
@@ -86,6 +88,7 @@ body{
   align-items: center;
   height: auto;
   width: auto;
+  position: relative;
 }
 .home_top{
 /* background-image: url("../public/pexels-vecislavas-popa-1643383.jpg"); */
@@ -109,7 +112,7 @@ align-items: center;
   display: flex;
   width: 100vw;
   flex-direction: row;
-  background-color: #cdffff;
+  background-color: gray;
   margin-bottom: 120px;
 }
 .allfooter_content{
@@ -136,9 +139,10 @@ align-items: center;
   align-items: center;
   justify-content: center;
   display: flex;
-  background-color: azure;
+  background-color: white;
   flex-direction: column;
   margin-top: 20px;
+  position: relative;
 }
 .about_page{
   display: flex;
@@ -176,11 +180,13 @@ align-items: center;
   color: white;
 }
 .service_page {
-  justify-content: space-around;
   align-items: center;
   width: 100vw;
   display: flex;
   flex-direction: column;
+  margin-top: 60px;
+  position: relative;
+  top: 0%;
 }
 .content_word_title{
   font: 20px 'Josefin Sans';
@@ -189,32 +195,38 @@ align-items: center;
   width: 360px;
 }
 .services_page{
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  width: 90vw;
+  width: 100vw;
   display: flex;
+  flex-direction: row;
   animation: myAnim 2s ease 0s 1 normal forwards;  flex-direction: row;
-  position: relative;
+}
+.table {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 40px;
 }
 .first_col{
-  position: absolute;
+  position: relative;
   top: 30px;
   left: 0%;
 }
 .second_col {
-  position: absolute;
+  position: relative;
   top: 30px;
-  left: 400px;
+  margin-left: -40px;
 }
 .third_col {
-  position: absolute;
-  left: 640px;
+  position: relative;
   top: 0px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 .fourth_col {
-  position: absolute;
+  position: relative;
   top: 30px;
-  left: 880px;
 }
 .service_text{
   font: 20px 'Josefin Sans';
@@ -243,7 +255,6 @@ align-items: center;
   height: auto;
   width: 200px;
   background-size: cover;
-  z-index: 1;
   background-position: center;
   margin-bottom: 40px;
 }
@@ -252,7 +263,6 @@ align-items: center;
   height: auto;
   width: 200px;
   background-size: cover;
-  z-index: 1;
   background-position: center;
   margin-bottom: 40px;
 }
@@ -261,7 +271,6 @@ align-items: center;
   height: auto;
   width: 200px;
   background-size: cover;
-  z-index: 1;
   background-position: center;
   margin-bottom: 40px;
 }
@@ -270,7 +279,6 @@ align-items: center;
   height: auto;
   width: 200px;
   background-size: cover;
-  z-index: 1;
   background-position: center;
   margin-bottom: 40px;
 }
@@ -279,7 +287,6 @@ align-items: center;
   height: auto;
   width: 200px;
   background-size: cover;
-  z-index: 1;
   background-position: center;
   margin-bottom: 40px;
 }
@@ -288,7 +295,6 @@ align-items: center;
   height: auto;
   width: 200px;
   background-size: cover;
-  z-index: 1;
   background-position: center;
   margin-bottom: 40px;
   }
@@ -341,7 +347,7 @@ align-items: center;
   border-radius: 10px;
   margin-right: 1vw;
   margin-top: 20px;
-  color: azure;
+  color: white;
   height: fit-content;
 }
 .mission_text{
@@ -349,10 +355,10 @@ align-items: center;
   padding-left: 40px;
   padding-top: 10px;
   padding-bottom: 20px;
-  color: azure;
+  color: white;
 }
 .our_mission_title{
-  color: azure;
+  color: white;
 }
 .our_vission_rectangle {
   background-color: #775f4f;
@@ -360,14 +366,14 @@ align-items: center;
   margin: 1vw;
   height: fit-content;
   border-radius: 10px;
-  color: azure;
+  color: white;
   margin-top: 20px;
 }
 .vission_text {
   padding-right: 40px;
   padding-left: 40px;
   padding-top: 10px;
-  color: azure;
+  color: white;
   padding-bottom: 20px;
 }
 .vission_mission{
@@ -375,7 +381,7 @@ align-items: center;
   flex-direction: row;
 }
 .our_vission_title {
-  color: azure;
+  color: white;
 }
 .carousel_title {
   color: #ffffff;
@@ -399,6 +405,12 @@ align-items: center;
   word-spacing: 1px;
   text-align: center;
   text-transform: capitalize;
+}
+.contact_btn{
+  border:#fbbc05 solid 2px;
+  border-radius: 10px;
+  padding:5px 10px 5px 10px;
+  margin: -5px 0 -5px 0;
 }
 .carousel_content{
   justify-content: center;
@@ -440,8 +452,8 @@ align-items: center;
   flex-direction: row;
   align-items: center;
   padding: 5px;
-  background-color: black;
-  color: azure;
+  background-color: gray;
+  color: white;
   border-radius: 12px;
   border: black solid 0.5px;
   width: 30vw;
@@ -495,6 +507,8 @@ align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  top: auto;
   align-items: center;
   width: 100vw;
 }
@@ -586,9 +600,9 @@ align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: stretch;
-  column-count: 4;
-  min-height: 70vh;
+  position: relative;
 }
 .product {
   border: 1px solid #000;
@@ -614,7 +628,7 @@ html {
 
   .main_nav {
     display: flex;
-    background-color: azure;
+    background-color: white;
     color: black;
     justify-content: space-between;
     align-items: center;
@@ -650,7 +664,7 @@ html {
   }
 
   .nav-options.active {
-    background: azure;
+    background: white;
     left: 0;
     opacity: 1;
     display: flex;
@@ -727,7 +741,7 @@ html {
     display: flex;
     width: 100vw;
     flex-direction: row;
-    background-color: #cdffff;
+    background-color: gray;
     margin-bottom: 60px;
   }
 
@@ -767,7 +781,7 @@ html {
     .about_page{
     justify-content: center;
       display: flex;
-      background-color: azure;
+      background-color: white;
       flex-direction: column;
     }
   .about_main {
@@ -775,7 +789,7 @@ html {
     align-items: center;
     justify-content: center;
     display: flex;
-    background-color: azure;
+    background-color: white;
     flex-direction: column;
     margin-top: 20px;
   }
@@ -882,7 +896,7 @@ html {
     }
   
     .content_title {
-      color: white;
+      color: black;
       align-items: center;
       text-align: center;
     }
@@ -1010,7 +1024,7 @@ html {
     border-radius: 10px;
     margin-right: 1vw;
     margin-top: 20px;
-    color: azure;
+    color: white;
     height: max-content;
   }
 
@@ -1019,11 +1033,11 @@ html {
     padding-left: 40px;
     padding-top: 10px;
     padding-bottom: 20px;
-    color: azure;
+    color: white;
   }
 
   .our_mission_title {
-    color: azure;
+    color: white;
   }
 
   .our_vission_rectangle {
@@ -1032,7 +1046,7 @@ html {
     margin: 1vw;
     height: min-content;
     border-radius: 10px;
-    color: azure;
+    color: white;
     margin-top: 20px;
   }
 
@@ -1040,7 +1054,7 @@ html {
     padding-right: 40px;
     padding-left: 40px;
     padding-top: 10px;
-    color: azure;
+    color: white;
     padding-bottom: 20px;
   }
 
@@ -1050,7 +1064,7 @@ html {
   }
 
   .our_vission_title {
-    color: azure;
+    color: white;
   }
   .chats {
     color: black;
@@ -1069,7 +1083,7 @@ html {
     align-items: center;
     padding: 5px;
     background-color: tomato;
-    color: black;
+    color: white;
     border-radius: 12px;
     width: 30vw;
     opacity: 0.8;
@@ -1186,7 +1200,7 @@ html {
 
   .main_nav {
     display: flex;
-    background-color: azure;
+    background-color: white;
     color: black;
     justify-content: space-between;
     align-items: center;
@@ -1222,7 +1236,7 @@ html {
   }
 
   .nav-options.active {
-    background: azure;
+    background: white;
     left: 0;
     opacity: 1;
     display: flex;
@@ -1314,7 +1328,7 @@ html {
     display: flex;
     width: 100vw;
     flex-direction: row;
-    background-color: #cdffff;
+    background-color: gray;
     margin-bottom: 120px;
   }
 
@@ -1346,7 +1360,7 @@ html {
     align-items: center;
     justify-content: center;
     display: flex;
-    background-color: azure;
+    background-color: white;
     flex-direction: column;
     margin-top: 20px;
     height: fit-content;
@@ -1378,7 +1392,7 @@ html {
     width: 80vw;
     border-radius: 10px;
     margin-top: 20px;
-    color: azure;
+    color: white;
   }
 
   .mission_text {
@@ -1386,18 +1400,18 @@ html {
     padding-left: 40px;
     padding-top: 10px;
     padding-bottom: 20px;
-    color: azure;
+    color: white;
   }
 
   .our_mission_title {
-    color: azure;
+    color: white;
   }
 
   .our_vission_rectangle {
     background-color: #775f4f;
     width: 80vw;
     border-radius: 10px;
-    color: azure;
+    color: white;
     margin-top: 20px;
   }
 
@@ -1405,7 +1419,7 @@ html {
     padding-right: 40px;
     padding-left: 40px;
     padding-top: 10px;
-    color: azure;
+    color: white;
     padding-bottom: 20px;
   }
 
@@ -1415,7 +1429,7 @@ html {
   }
 
   .our_vission_title {
-    color: azure;
+    color: white;
   }
   .chats {
     color: black;

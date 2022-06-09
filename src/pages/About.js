@@ -3,7 +3,7 @@ import CompanyCard from '../components/CompanyCard'
 
 function About() {
     return (
-        <div className='about_main'>
+        <div className='about_main' id='about'>
             <h1>ABOUT US</h1>
             <div className='about_page'>
                 <div className='company_description'>

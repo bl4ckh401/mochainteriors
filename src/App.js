@@ -33,22 +33,14 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path='/shop' element={<Shop />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/signup' element={<SignUp />} />
-          <Route path='/cart' element={<CartPage />} />
-
-        </Routes>
-      </Router>
+      <Header />
+      <Home />
+      <About />
+      <Services />
+      <Portfolio />
+      <Shop />
+      <Contact />
+      <Footer />
     </div>
   );
 }

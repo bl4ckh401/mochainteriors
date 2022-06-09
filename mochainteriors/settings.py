@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 't%yrzvm#u*@*nzrfc-b2bbn1+se5wckbcer5s+oz8-_g$qi%4'
+SECRET_KEY = 'XXXXXXXXXXXXX'  # your secret key
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -131,14 +131,16 @@ CART_SESSION_ID = 'cart'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# [START db_setup]
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mochainteriors',
-        'USER': 'postgres',
-        'PASSWORD': '123456',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'shopping_cart',
+        'USER': 'YOUR_USERNAME',  # replace with your own username
+        'PASSWORD': 'YOUR_PASSWORD',  # replace with your own password
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': ''
     }
 }
 
@@ -192,8 +194,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 django_heroku.settings(locals())
 
-
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # allows to load iframe from same hostname
 X_FRAME_OPTIONS = 'SAMEORIGIN'

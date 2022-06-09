@@ -39,7 +39,7 @@ export const setAuthorizationToken = (token) => {
 export const login = (username, password) => {
     return dispatch => {
         dispatch(loginRequest(username))
-        axios.post('https://mochainterior.herokuapp.com/api/token/', { username, password })
+        axios.post('https://mochainteriors-352712.df.r.appspot.com/api/token/', { username, password })
             .then((res) => {
                 let token = res.data.token
                 localStorage.setItem('token', token)
@@ -66,13 +66,13 @@ export const logout = () => {
 
 export const renewAuthorizationToken = (token) => {
     return dispatch => {
-        axios.post('https://mochainterior.herokuapp.com/api/token/refresh/', { token })
+        axios.post('https://mochainteriors-352712.df.r.appspot.com/api/token/refresh/', { token })
     }
 }
 
 export const checkAuthorizationToken = (token) => {
     return dispatch => {
-        axios.post('https://mochainterior.herokuapp.com/api/token/refresh/', { token })
+        axios.post('https://mochainteriors-352712.df.r.appspot.com/api/token/refresh/', { token })
             .then((res) => {
                 dispatch(renewAuthorizationToken(res.data.token))
             })
@@ -87,7 +87,7 @@ export const checkAuthorizationToken = (token) => {
 
 export const userSignupRequest = (userInfo) => {
     return dispatch => {
-        axios.post('https://mochainterior.herokuapp.com/api/token/', userInfo)
+        axios.post('https://mochainteriors-352712.df.r.appspot.com/api/token/', userInfo)
             .then((res) => {
                 toastr.success("Welcome! Your account is available now.")
             })

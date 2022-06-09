@@ -15,7 +15,7 @@ function Shop(props) {
 
 
     return (
-        <div className='shop_page'>
+        <div className='shop_page' id='shop'>
             <ProductList products={props.products} addToCart={props.addToCart} />
         </div>
     )

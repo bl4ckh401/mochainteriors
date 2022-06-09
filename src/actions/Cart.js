@@ -44,10 +44,10 @@ export const placeOrder = (items, shippingData, billingData) => {
             quantitiesArr.push(element.quantity)
 
             let updatedQuantity = element.product.quantity - element.quantity
-            axios.put(`https://mochainterior.herokuapp.com/cartproducts/${element.product.id}/`, { category: element.product.category, name: element.product.name, price: element.product.price, quantity: updatedQuantity })
+            axios.put(`https://mochainteriors-352712.df.r.appspot.com/cartproducts/${element.product.id}/`, { category: element.product.category, name: element.product.name, price: element.product.price, quantity: updatedQuantity })
         })
 
-        axios.post('https://mochainterior.herokuapp.com/cartorders/', { products: productsArr, quantities: quantitiesArr, total_price: totalPrice.toFixed(2), delivery_method: shippingData.deliveryMethod, payment_method: billingData.paymentMethod })
+        axios.post('https://mochainteriors-352712.df.r.appspot.com/cartorders/', { products: productsArr, quantities: quantitiesArr, total_price: totalPrice.toFixed(2), delivery_method: shippingData.deliveryMethod, payment_method: billingData.paymentMethod })
             .then((res) => {
                 toastr.success("Placing order successfully.")
             })
