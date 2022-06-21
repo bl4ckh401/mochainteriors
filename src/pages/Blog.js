@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import BlogCard from '../components/BlogCard'
 
 function Blog() {
     const [blogPosts, setBlogPosts] = useState([])
-    const navigate = useNavigate()
 
     const onLoad = () => {
         const requestOptions = {
@@ -15,7 +13,7 @@ function Blog() {
             .then(response => response.json())
             .then((response) => {
                 setBlogPosts(response)
-                console.log(blogPosts)
+                console.log(response)
             })
     }
 
@@ -23,11 +21,15 @@ function Blog() {
         onLoad()
     }, [])
     return (
-        <div className='blog_page'>
+        <div className='blog_page' id='blog'>
+            <h1>BLOG PAGE</h1>
             <div className='blog_content'>
                 {
                     blogPosts.map((post) => {
-                        <BlogCard created_at={post.created_at} blog_slug={post.blog_slug} blog_title={post.blog_title} blog_post={post.blog_post} cover_image={post.blog_cover_image} />
+                        console.log(post)
+                        return (
+                            <BlogCard created_at={post.created_at} blog_slug={post.blog_slug} blog_title={post.blog_title} blog_post={post.blog_post} cover_image={post.blog_cover_image} />
+                        )
                     })
                 }
             </div>

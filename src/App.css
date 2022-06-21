@@ -29,10 +29,13 @@ body{
   font-weight: 400;
   height: 171px;
   color:  black;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: sticky;
 }
 
 .logo_nav {
@@ -138,8 +141,10 @@ align-items: center;
   height: fit-content;
   align-items: center;
   justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
   display: flex;
-  background-color: white;
+  background-color: #f6f6f6;
   flex-direction: column;
   margin-top: 20px;
   position: relative;
@@ -164,20 +169,86 @@ align-items: center;
   border: #000 solid 1px;
   margin-top: 20px;
 }
-.all_content{
-  justify-content: center;
+.vase_images {
+  width: 40vw;
+}
+
+.vase_image {
+  width: 40vw;
+  height: 600px;
+}
+.parallax{
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+#parallax1_image{
+  background-image: url('/public/147440929_3118046871798143_1449194508755950564_n.jpg');
+}
+#parallax3_image {
+  background-image: url('/public/258865952_201798178779665_6617266540241310402_n.jpg');
+}
+#parallax4_image {
+  background-image: url('/public/242392848_461076591685651_843522479880200203_n.jpg');
+}
+.parallax2 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  resize: both;
+  height: 60vh;
+  z-index: -2;
+  width: 100%;
+}
+#parallax2_image{
+  background-image: url('/public/275673843_285852306865257_507972222186655156_n.webp');
+  height: 60vh;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: #000;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: 109;
+  background-repeat: no-repeat;
+}
+.all_content {
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: 600px;
   color: #241e20;
 }
-.long_text{
-  padding-right: 40px;
+
+.company_description{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.company_shape{
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  height: 600px;
+  width: 40vw;
+}
+
+.long_text {
   padding-left: 40px;
+  padding-right: 40px;
   padding-top: 10px;
-  padding-bottom: 20px;
-  font-family:'Metropolis';
-  color: white;
+  padding-bottom: 27px;
+  font: 16px;
+  font-family: 'Roboto';
+  color: #241e20;
 }
 .service_page {
   align-items: center;
@@ -543,6 +614,7 @@ align-items: center;
 }
 .blog_page{
   display: flex;
+  flex-direction: column;
   width: 100vw;
   height: fit-content;
   margin-top: 120px;

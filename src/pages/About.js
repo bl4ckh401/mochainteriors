@@ -1,19 +1,39 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CompanyCard from '../components/CompanyCard'
 
 function About() {
+    const [aboutUs, setAboutPage] = useState({})
+
+    const onLoad = () => {
+        const requestOptions = {
+            method: "GET",
+            headers: { 'Content-Type': "application/json" },
+        }
+        fetch('http://127.0.0.1:8000/api/viewabout', requestOptions)
+            .then(response => response.json())
+            .then((response) => {
+                setAboutPage(response)
+                console.log(response)
+            })
+    }
+    useEffect(() => {
+        onLoad()
+    }, [])
+
     return (
         <div className='about_main' id='about'>
             <h1>ABOUT US</h1>
             <div className='about_page'>
                 <div className='company_description'>
                     <CompanyCard title="The Company"
-                        card_shape="long_horizontal_rectangle"
+                        card_shape="company_shape"
                         content_style="all_content"
                         card_title="long_content_title"
                         card_text="long_text"
-                        text="We are a leading design studio specializing in design and build projects for both residential, show homes for developers and other commercial interior design projects. Our portfolio includes both new home construction and renovations of all sizes, small to large.
-                                                    Supported by a team of experts who are able to offer professional services in joinery, gypsum, electrical, paint works etc. We design and install with a key focus on curating innovative designs, quality products and timely delivery." />
+                        text={aboutUs.about_us} />
+                    <div className='vase_images'>
+                        <img className='vase_image' src='/vase.jpg' alt='vase mocha interiors' />
+                    </div>
                     {/* <div className='vission_mission'>
                         <CompanyCard title="Our Mission"
                             card_shape="our_mission_rectangle"

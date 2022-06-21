@@ -10,6 +10,7 @@ import { FiSend } from 'react-icons/fi'
 function Services() {
     return (
         <div className='service_page' id='services'>
+            <h1>SERVICES</h1>
             <div className='services_page'>
                 <div className='first_col'>
                     <ServiceCard

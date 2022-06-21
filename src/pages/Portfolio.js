@@ -29,7 +29,12 @@ function Portfolio() {
                 {
                     portfolio.map((work) => {
                         return (
-                            <PortfolioCard source={work.cover_image} tag={work.project_tag} />
+                            <div>
+                                <div>
+                                    {work.get_category_display}
+                                </div>
+                                <PortfolioCard source={work.cover_image} tag={work.project_tag} />
+                            </div>
                         )
                     })
                 }

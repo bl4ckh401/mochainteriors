@@ -1,8 +1,8 @@
 from rest_framework.views import APIView
 # from rest_framework.permissions import IsAuthenticated
 # from django.contrib.auth.decorators import login_required
-from .serializers import BlogPostSerializer, MessageSerializer, ProjectSerializer
-from .models import Messages, Project, BlogPost
+from .serializers import AboutSerializer, BlogPostSerializer, HomePageSerializer, MessageSerializer
+from .models import TAGS, AboutUs, Messages, BlogPost
 from rest_framework import status
 from rest_framework.response import Response
 # from django.views.decorators.csrf import csrf_exempt
@@ -18,11 +18,60 @@ from rest_framework.response import Response
 #         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
-class ProjectView(APIView):
+# class ProjectView(APIView):
+#     def get(self, request, format=None):
+#         project = Project.objects.all()
+#         serializer = ProjectSerializer(project, many=True)
+#         return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+# class CreateProject(APIView):
+#     serializer_class = ProjectSerializer
+
+#     def post(self, request, format=None):
+#         serializer = self.serializer_class(request)
+#         if serializer.is_valid():
+#             project_description = request.data.get('project_description')
+#             before_images = request.FILES.get('before_images')
+#             progress_images = request.FILES.get('progress_images')
+#             after_images = request.FILES.get('after_images')
+#             project_tag = request.data.get('project_tag')
+#             for image in before_images:
+#                 for image in progress_images:
+#                     for image in after_images:
+#                         project = Project(
+#                             project_description=project_description,
+#                             before_images=before_images,
+#                             progress_images=progress_images,
+#                             after_images=after_images,
+#                             project_tag=project_tag)
+#                         project.save()
+
+
+class CreateAboutUs(APIView):
+    serializer_class = AboutSerializer
+
+    def post(self, request, format=None):
+        serializer = self.serializer_class(data=request.data)
+        if serializer.is_valid():
+            about_us = serializer.data.get('about_us')
+            q_set = AboutUs.objects.filter(id=1)
+            if q_set.exists():
+                aboutUs = q_set[0]
+                aboutUs.about_us = about_us
+                aboutUs.save(update_fields=['about_us'])
+                return Response({'About Description Added': 'Continue'}, status=status.HTTP_200_OK)
+            serializer.save()
+            return Response({'New About Description Added': 'Please Continue'}, status=status.HTTP_200_OK)
+        else:
+            return Response({'Invalid Data': 'Bad Request'}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class ViewAboutUs(APIView):
     def get(self, request, format=None):
-        project = Project.objects.all()
-        serializer = ProjectSerializer(project, many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        about = AboutUs.objects.get(id=1)
+        AboutUsData = AboutSerializer(about)
+        return Response(AboutUsData.data, status=status.HTTP_200_OK)
 
 
 class SendMessage(APIView):
@@ -64,78 +113,23 @@ class OneBlogPost(APIView):
             return Response({'Error': 'No Blog_ID Provided'}, status=status.HTTP_400_BAD_REQUEST)
 
 
-# @method_decorator(csrf_exempt, name='dispatch')
-# class CartAdd(APIView):
+class UpdateHomePage(APIView):
+    serializer_class = HomePageSerializer
 
-#     permission_classes = [IsAuthenticated]
-
-#     def post(self, request, id):
-#         content = {
-#             'user': str(request.user),  # `django.contrib.auth.User` instance.
-#             'auth': str(request.auth),  # None
-#         }
-#         cart = Cart(request)
-#         queryset = i_stock.objects.filter(id=id)
-#         if queryset.exists():
-#             product = queryset[0]
-#             cart.add(product=product)
-#             print(cart)
-#             return Response({'Success': 'Item added to Cart'}, status=status.HTTP_200_OK)
-#         else:
-#             return Response({'Error': 'Item does not Exist'}, status=status.HTTP_400_BAD_REQUEST)
+    def post(self, request, format=None):
+        serializer = HomePageSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({'Success': 'Image and Text uploaded successfully'}, status=status.HTTP_200_OK)
+        return Response({'Error': 'Invalid Data'}, status=status.HTTP_400_BAD_REQUEST)
 
 
-# @method_decorator(csrf_exempt, name='dispatch')
-# class ClearItem(APIView):
-#     permission_classes = [IsAuthenticated]
-
-#     def post(self, request, id):
-#         cart = Cart(request)
-#         queryset = i_stock.objects.filter(id=id)
-#         if queryset.exists():
-#             product = queryset[0]
-#             cart.remove(product)
-#             return Response({'Success': 'Item Removed to Cart'}, status=status.HTTP_200_OK)
-#         else:
-#             return Response({'Error': 'Item does not Exist'}, status=status.HTTP_400_BAD_REQUEST)
+class DeleteHomePage(APIView):
+    def post(self, request, format=None):
+        pass
 
 
-# @method_decorator(csrf_exempt, name='dispatch')
-# class AddItem(APIView):
-#     permission_classes = [IsAuthenticated]
-
-#     def post(self, request, id):
-#         cart = Cart(request)
-#         product = i_stock.objects.get(id=id)
-#         cart.add(product=product)
-#         return Response({'Success': 'Item added to Cart'}, status=status.HTTP_200_OK)
-
-
-# @method_decorator(csrf_exempt, name='dispatch')
-# class DecrementItem(APIView):
-#     permission_classes = [IsAuthenticated]
-
-#     def post(self, request, id):
-#         cart = Cart(request)
-#         product = i_stock.objects.get(id=id)
-#         cart.decrement(product=product)
-#         return Response({'Success': 'Item Decremented from Cart'}, status=status.HTTP_200_OK)
-
-
-# @method_decorator(csrf_exempt, name='dispatch')
-# class ClearCart(APIView):
-#     permission_classes = [IsAuthenticated]
-
-#     def get(self, request):
-#         cart = Cart(request)
-#         cart.clear()
-#         return Response({'Success': 'Cart Cleared'}, status=status.HTTP_200_OK)
-
-
-# @method_decorator(csrf_exempt, name='dispatch')
-# class ViewCart(APIView):
-#     permission_classes = [IsAuthenticated]
-
-#     def get(self, request):
-#         print(Cart)
-#         return Response(request.data, status=status.HTTP_200_OK)
+# class ShowCategory(APIView):
+#     def get(self, request, format=None):
+#         category = TAGS.__getattribute__
+#         return Response(category, status=status.HTTP_200_OK)

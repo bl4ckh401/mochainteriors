@@ -30,14 +30,20 @@ TAGS = (
 )
 
 
-class Project(models.Model):
-    project_title = models.CharField(max_length=25, default="", null=True)
-    link_url = models.CharField(max_length=255, default="", null=True)
-    cover_image = models.ImageField(upload_to='images')
-    project_tag = models.CharField(choices=TAGS, max_length=25, default="")
+# class Project(models.Model):
+#     project_description = models.TextField(
+#         max_length=10000, default="", null=True)
+#     before_images = models.ImageField(upload_to='images')
+#     progress_images = models.ImageField(upload_to='images')
+#     after_images = models.ImageField(upload_to='images',)
+#     project_tag = models.CharField(choices=TAGS, max_length=25, default="")
 
-    def __str__(self):
-        return self.project_title
+#     def __str__(self):
+#         return self.project_title
+
+
+class AboutUs(models.Model):
+    about_us = models.TextField(max_length=10000, default="", null=True)
 
 
 class Messages(models.Model):
@@ -55,8 +61,12 @@ STATUS = (
 )
 
 
+class HomePage(models.Model):
+    homepage_text = models.TextField(max_length=10000, default='', null=True)
+    homepage_image = models.ImageField(upload_to='images')
+
+
 class BlogPost(models.Model):
-    blog_cover_image = models.CharField(max_length=255, default="", null=True)
     blog_id = models.IntegerField(unique=True, null=False,
                                   primary_key=True, auto_created=True)
     blog_title = models.CharField(max_length=255, default="", null=True)

@@ -1,6 +1,7 @@
 import React from 'react'
 
 function CompanyCard(props) {
+    console.log(props)
     return (
         <div className={props.card_shape}>
             <div className={props.content_style}>

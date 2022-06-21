@@ -9,9 +9,10 @@ function CauroselPage() {
             <Carousel autoPlay={true} showArrows={true} infiniteLoop={true} showThumbs={false} useKeyboardArrows={true} interval={3000}>
                 {
                     CarouselData.map((data) => {
+                        console.log(data.image)
                         return (
-                            <div className='caurosel'>
-                                <img src={data.image} alt='Interior living room' className='imagehome' />
+                            <div className='caurosel' key={data.index}>
+                                <img src={`${data.image}`} alt='Interior living room' className='imagehome' />
                                 <span className='carousel_content'>
                                     <span className=''><h1 className='carousel_title'>{data.title}</h1></span>
                                     <span className=''><h2 className='carousel_text'>{data.text}</h2></span>

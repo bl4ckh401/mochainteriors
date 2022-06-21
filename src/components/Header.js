@@ -35,15 +35,14 @@ function Header() {
                 <div className='logo_nav'>
                     <ul className={click ? "nav-options active" : "nav-options"}>
                         {HeaderData.map((item) => {
-                            console.log(item)
                             return (
                                 <Link to={item.path}
                                     spy={true}
                                     smooth={true}
                                     hashSpy={true}
-                                    offset={-50}
+                                    offset={-200}
                                     duration={500}
-                                    delay={1000}
+                                    delay={500}
                                     isDynamic={true}
                                     ignoreCancelEvents={false}
                                     spyThrottle={500}>

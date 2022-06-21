@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'XXXXXXXXXXXXX'  # your secret key
+SECRET_KEY = 't%yrzvm#u*@*nzrfc-b2bbn1+se5wckbcer5s+oz8-_g$qi%4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -63,8 +63,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'mochainteriors.urls'
 REST_FRAMEWORK = {
@@ -117,6 +115,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 'cart.context_processor.cart_total_amount',
 
             ],
@@ -133,16 +132,34 @@ CART_SESSION_ID = 'cart'
 
 # [START db_setup]
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'shopping_cart',
-        'USER': 'YOUR_USERNAME',  # replace with your own username
-        'PASSWORD': 'YOUR_PASSWORD',  # replace with your own password
-        'HOST': 'localhost',
-        'PORT': ''
+if os.getenv('GAE_APPLICATION', None):
+    # Running on production App Engine, so connect to Google Cloud SQL using
+    # the unix socket at /cloudsql/<your-cloudsql-connection string>
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'HOST': '/cloudsql/mochainteriors-352712:us-central1:myinstance',
+            'USER': 'postgres',
+            'PASSWORD': 'Kiptoo11135',
+            'NAME': 'mochainteriors',
+        }
     }
-}
+else:
+    # Running locally so connect to either a local MySQL instance or connect
+    # to Cloud SQL via the proxy.  To start the proxy via command line:
+    #    $ cloud_sql_proxy -instances=[INSTANCE_CONNECTION_NAME]=tcp:3306
+    # See https://cloud.google.com/sql/docs/mysql-connect-proxy
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'HOST': '127.0.0.1',
+            'PORT': '3308',
+            'NAME': 'mochainteriors',
+            'USER': 'postgres',
+            'PASSWORD': 'Kiptoo11135',
+        }
+    }
+# [END db_setup]
 
 
 # Password validation
@@ -181,7 +198,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+MEDIA_URL = "media/"
+
+STATIC_URL = '/staticfiles/'
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -190,7 +209,13 @@ ALLOWED_HOSTS = ['127.0.0.1:3000', 'mochainterior.herokuapp.com']
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'build/static')
 ]
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
+
+
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 django_heroku.settings(locals())
 
